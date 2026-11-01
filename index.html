@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07130f">
+    <meta name="description" content="Your nearby pharmacy in Balaga Mettu, Srikakulam. Send us your medicine request, and our team will assist you.">
+    <title>Gowri Medicals | Your Local Pharmacy</title>
+    <script>
+      (() => {
+        try {
+          const theme = localStorage.getItem("gm-theme");
+          const language = localStorage.getItem("gm-language");
+          document.documentElement.dataset.theme = theme === "light" ? "light" : "dark";
+          document.documentElement.lang = language === "te" ? "te" : "en";
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+          document.documentElement.lang = "en";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css?v=11">
+    <script src="app.js?v=11" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Gowri Medicals home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M20 5v30M5 20h30" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <span class="brand-name">Gowri <strong>Medicals</strong><small>గౌరి మెడికల్స్</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="primary-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Our Store</a>
+          <a href="#location">Location</a>
+          <a href="#order">Delivery</a>
+          <div class="nav-preferences">
+            <button class="preference-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode">
+              <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.4 8.4 0 0 1 8.9 3.8 8.7 8.7 0 1 0 20.2 15.1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span id="theme-label">Dark mode</span>
+            </button>
+            <label class="language-control">
+              <span class="sr-only">Select language</span>
+              <select id="language-select" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="te">తెలుగు</option>
+              </select>
+            </label>
+          </div>
+          <a class="button button-small button-outline" href="#order">Order Medicines <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span> YOUR LOCAL PHARMACY</p>
+            <h1 id="hero-title"><span>Your Local Pharmacy,</span><br>Here to Help.</h1>
+            <p class="hero-telugu" lang="te">మీ ఆరోగ్యం మా బాధ్యత</p>
+            <p class="hero-description">Your nearby pharmacy in Balaga Mettu, Srikakulam. Send us your medicine request, and our team will assist you.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#order">Request medicines <span aria-hidden="true">→</span></a>
+              <a class="button button-quiet" href="https://www.google.com/maps/dir/?api=1&amp;destination=18.3178061%2C83.8949325&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-note">
+              <span class="note-icon" aria-hidden="true">✳</span>
+              <span><strong>Open every day</strong><br>7:30 AM – 10:30 PM</span>
+            </div>
+          </div>
+          <div class="hero-card" aria-label="Gowri Medicals medical shop">
+            <div class="hero-card-top"><span class="live-pill"><span class="status-dot"></span> HERE FOR YOU</span><span class="card-cross" aria-hidden="true">+</span></div>
+            <div class="hero-illustration" aria-hidden="true">
+              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+              <div class="medical-bag">
+                <div class="bag-handle"></div><div class="bag-cross">+</div>
+              </div>
+              <div class="leaf leaf-one"></div><div class="leaf leaf-two"></div>
+              <div class="small-pill pill-one"></div><div class="small-pill pill-two"></div>
+            </div>
+            <div class="hero-card-bottom">
+              <div><span class="card-label">YOUR LOCAL MEDICAL SHOP</span><strong>Care, right around the corner.</strong></div>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom container">
+          <span>స్రీకాకుళం · SRIKAKULAM, ANDHRA PRADESH</span>
+          <a href="#about">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Medical shop highlights">
+        <div class="container trust-grid">
+          <div><span class="trust-icon">✳</span><span><strong>Friendly local care</strong><small>మీకు దగ్గరగా, మీతో పాటు</small></span></div>
+          <div><span class="trust-icon">◷</span><span><strong>Open until 10:30 PM</strong><small>Every day, 7:30 AM – 10:30 PM</small></span></div>
+          <div><span class="trust-icon">⌁</span><span><strong>Easy medicine requests</strong><small>WhatsApp us or use our order form</small></span></div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="container split-section">
+          <div>
+            <p class="eyebrow">ABOUT GOWRI MEDICALS</p>
+            <h2>A familiar face<br>for your family's care.</h2>
+          </div>
+          <div class="about-copy">
+            <p>At Gowri Medicals, we’re here to make everyday medicine needs feel simple and personal. Visit us at Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001, or send a medicine request from wherever you are in Srikakulam.</p>
+            <p class="telugu-copy" lang="te">మీ కుటుంబ ఆరోగ్య సంరక్షణ కోసం మేము ఎల్లప్పుడూ మీకు దగ్గరగా ఉంటాము.</p>
+            <a class="text-link" href="#location">Find our shop <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section owners-section" id="owners">
+        <div class="container">
+          <div class="section-heading">
+            <div><p class="eyebrow">OWNERS OF GOWRI MEDICALS</p><h2>Meet Our Owners</h2></div>
+            <p>The People Behind Gowri Medicals</p>
+          </div>
+          <div class="owners-grid">
+            <article class="owner-card">
+              <img src="images/k-satish.png" alt="K. Satish, owner of Gowri Medicals" loading="lazy">
+              <div class="owner-caption"><span class="eyebrow">OWNER</span><h3>K. Satish</h3></div>
+            </article>
+            <article class="owner-card">
+              <img src="images/g-srinivasa-rao.png" alt="G. Srinivasa Rao, owner of Gowri Medicals" loading="lazy">
+              <div class="owner-caption"><span class="eyebrow">OWNER</span><h3>G. Srinivasa Rao</h3></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section order-section" id="order">
+        <div class="container">
+          <div class="section-heading">
+            <div><p class="eyebrow">A SIMPLE WAY TO REQUEST</p><h2>Medicine, made easier.</h2></div>
+            <p>Share what you need. We’ll confirm availability and delivery or pickup details with you.</p>
+          </div>
+          <div class="order-layout">
+            <form class="order-form" id="order-form">
+              <div class="form-heading"><span class="step-number">01</span><div><h3>Your details</h3><p>We’ll use these details to respond to your request.</p></div></div>
+              <div class="form-grid">
+                <label class="field field-wide">Full name <span class="required">*</span>
+                  <input name="name" type="text" autocomplete="name" placeholder="Enter your full name" required maxlength="80">
+                </label>
+                <label class="field">Mobile number <span class="required">*</span>
+                  <input name="mobile" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" pattern="[6-9][0-9]{9}" required maxlength="10" aria-describedby="mobile-hint">
+                  <small id="mobile-hint">Enter a valid 10-digit Indian mobile number.</small>
+                </label>
+                <fieldset class="field field-choice">
+                  <legend>How would you like to receive it? <span class="required">*</span></legend>
+                  <div class="choice-row">
+                    <label class="choice"><input type="radio" name="fulfilment" value="Doorstep Delivery" required><span>Doorstep delivery</span></label>
+                    <label class="choice"><input type="radio" name="fulfilment" value="Shop Pickup" required><span>Shop pickup</span></label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="form-divider"></div>
+              <div class="form-heading medicine-heading"><span class="step-number">02</span><div><h3>Medicine request</h3><p>Add medicine names and the quantity you need.</p></div></div>
+              <div class="medicine-list" id="medicine-list">
+                <div class="medicine-row">
+                  <label class="field medicine-name">Medicine name <span class="required">*</span><input name="medicine" type="text" placeholder="e.g. medicine name" required maxlength="100"></label>
+                  <label class="field medicine-quantity">Qty <span class="required">*</span><input name="quantity" type="number" min="1" max="99" value="1" inputmode="numeric" required></label>
+                  <button class="remove-medicine" type="button" aria-label="Remove medicine" hidden>×</button>
+                </div>
+              </div>
+              <button class="add-medicine" id="add-medicine" type="button"><span aria-hidden="true">＋</span> Add another medicine</button>
+              <label class="field instructions-field">Additional instructions <span class="optional">(optional)</span>
+                <textarea name="instructions" rows="3" maxlength="500" placeholder="Anything else we should know?"></textarea>
+              </label>
+              <label class="urgent-check"><input name="urgent" type="checkbox"><span class="checkmark"></span><span><strong>Urgent medicine request</strong><small>We’ll do our best to respond as soon as possible.</small></span></label>
+              <section class="delivery-location-section" id="route" hidden>
+                <div class="form-divider"></div>
+                <div class="form-heading delivery-heading"><span class="step-number">03</span><div><h3>Customer location</h3><p id="location-section-description">Share and confirm your exact location for doorstep delivery.</p></div></div>
+                <div class="location-picker">
+                  <div class="location-methods" role="group" aria-label="Choose a delivery location method">
+                    <button class="location-method" id="use-current-location" data-location-method="gps" type="button" aria-pressed="false"><span aria-hidden="true">◎</span><span>Use My Current Location</span></button>
+                    <button class="location-method" id="show-picker-map" data-location-method="map" type="button" aria-pressed="false"><span aria-hidden="true">⌖</span><span>Select Location on Map</span></button>
+                    <button class="location-method" id="show-manual-address" data-location-method="manual" type="button" aria-pressed="false"><span aria-hidden="true">⌂</span><span>Enter Address Manually</span></button>
+                    <button class="location-method skip-location-method" id="skip-location-sharing" data-location-method="skip" type="button" aria-pressed="false" hidden><span aria-hidden="true">↷</span><span>Skip sharing location (Shop Pickup)</span></button>
+                  </div>
+                  <p class="location-picker-help">Sharing your location is required for doorstep delivery and optional for shop pickup. GPS permission is requested only when you choose the current-location option.</p>
+                  <p class="gps-location-message" id="gps-location-message" role="status" hidden></p>
+                  <div class="picker-map-panel" id="picker-map-panel" hidden>
+                    <p class="map-selection-hint" id="map-selection-hint">Tap the map to place your pin. Drag the pin to adjust it.</p>
+                    <div id="picker-map" class="picker-map" role="region" aria-label="Interactive map to select your delivery location"></div>
+                    <div class="map-fallback" id="picker-map-fallback" hidden>
+                      <p id="picker-map-fallback-message">The delivery map is unavailable. You can still use GPS or enter an address manually.</p>
+                      <a class="button button-outline" id="picker-map-fallback-link" href="https://www.google.com/maps/search/?api=1&amp;query=18.3178061%2C83.8949325" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <p class="map-attribution">© <a href="https://openfreemap.org" target="_blank" rel="noopener noreferrer">OpenFreeMap</a> · © <a href="https://openmaptiles.org" target="_blank" rel="noopener noreferrer">OpenMapTiles</a> · © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a></p>
+                  </div>
+                  <div class="manual-address-form" id="manual-address-form" hidden>
+                    <h4>Enter Address Manually</h4>
+                    <div class="manual-address-grid">
+                      <label class="field">Locality in Srikakulam <span class="required">*</span>
+                        <select name="manual-locality" required disabled>
+                          <option value="">Select locality</option>
+                          <option>Balaga</option>
+                          <option>Srikakulam Town</option>
+                          <option>Gujarathipeta</option>
+                          <option>Other Srikakulam locality</option>
+                        </select>
+                      </label>
+                      <label class="field">Street or area name <span class="required">*</span>
+                        <input name="street" type="text" placeholder="Street, road or area" required maxlength="120" disabled>
+                      </label>
+                      <label class="field">House number / building name
+                        <input name="building" type="text" placeholder="House number or building" maxlength="120" disabled>
+                      </label>
+                      <label class="field">Nearby landmark
+                        <input name="landmark" type="text" placeholder="A nearby landmark" maxlength="120" disabled>
+                      </label>
+                      <label class="field field-wide">Additional delivery instructions
+                        <textarea name="delivery-instructions" rows="2" maxlength="300" placeholder="Floor, gate, directions for delivery, etc." disabled></textarea>
+                      </label>
+                    </div>
+                    <button class="button button-outline" id="find-manual-address" type="button">Find Address on Map <span aria-hidden="true">⌖</span></button>
+                    <p class="manual-address-hint">We’ll look for a matching map location. If no exact match is found, select your pin on the map or use GPS.</p>
+                  </div>
+                  <div class="address-suggestions" id="address-suggestions" hidden>
+                    <strong>Choose the matching map result, then adjust the pin if needed:</strong>
+                    <div id="address-suggestion-list"></div>
+                  </div>
+                  <div class="selected-location-card" id="selected-location-card" hidden>
+                    <div><span class="status-dot"></span><strong id="selected-location-title">Location selected — please confirm</strong></div>
+                    <p id="selected-location-address" data-user-content="true"></p>
+                    <p class="selected-coordinates" id="selected-coordinates"></p>
+                    <p class="selected-location-hint">Check the pin and address before confirming.</p>
+                    <div class="selected-location-actions">
+                      <button class="button button-outline" id="edit-selected-location" type="button" hidden>Edit Location</button>
+                      <button class="button button-primary" id="confirm-selected-location" type="button">Confirm Location</button>
+                    </div>
+                  </div>
+                  <p class="route-status" id="route-status" role="status" aria-live="polite" hidden></p>
+                </div>
+                <p class="route-availability">Delivery availability and timing are confirmed by Gowri Medicals.</p>
+                <div class="route-results" id="route-results" hidden>
+                  <div class="route-summary">
+                    <div class="route-endpoint"><span class="route-marker shop-marker" aria-hidden="true"></span><span><small>STARTING POINT</small><strong>Gowri Medicals</strong><span>Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001.</span></span></div>
+                    <div class="route-connector" aria-hidden="true"></div>
+                    <div class="route-endpoint"><span class="route-marker destination-marker" aria-hidden="true"></span><span><small>DESTINATION</small><strong id="route-destination" data-user-content="true">Your address</strong><span id="route-locality-label" data-user-content="true">Srikakulam</span></span></div>
+                    <div class="route-metrics" id="route-metrics" hidden><span><small>ROUTE DISTANCE</small><strong id="route-distance"></strong></span><span><small>ESTIMATED DRIVING TIME</small><strong id="route-duration"></strong></span></div>
+                  </div>
+                  <div class="route-map-wrap">
+                    <div id="route-map" class="route-map" role="region" aria-label="Map showing the route from Gowri Medicals to the entered delivery address"></div>
+                    <p class="map-attribution">© <a href="https://openfreemap.org" target="_blank" rel="noopener noreferrer">OpenFreeMap</a> · © <a href="https://openmaptiles.org" target="_blank" rel="noopener noreferrer">OpenMapTiles</a> · © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> · Geocoding by Photon · Routing by OSRM</p>
+                  </div>
+                  <p class="route-result-note" id="route-result-note">Route estimates are approximate and may vary with traffic and road conditions.</p>
+                  <a class="button button-outline route-google-link" id="route-google-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=18.3178061%2C83.8949325&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Open Directions in Google Maps <span aria-hidden="true">↗</span></a>
+                </div>
+              </section>
+              <p class="form-error" id="form-error" role="alert" hidden></p>
+              <button class="button button-primary submit-button" type="submit" disabled>Review order request <span aria-hidden="true">→</span></button>
+              <p class="privacy-note">Your details are used only to respond to this request. This form does not place or confirm an order.</p>
+            </form>
+
+          </div>
+          <section class="order-summary" id="order-summary" aria-live="polite" hidden>
+            <div class="summary-header"><span class="summary-check" aria-hidden="true">✓</span><div><p class="eyebrow">REQUEST READY</p><h3>Review your request</h3></div></div>
+            <p class="summary-notice">This is only a request. It is not confirmed until Gowri Medicals confirms availability and accepts it.</p>
+            <div id="summary-content" class="summary-content"></div>
+            <div class="summary-actions">
+              <a class="button button-primary whatsapp-link" id="whatsapp-one" href="#" target="_blank" rel="noopener noreferrer">Send to 9989105144 <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline whatsapp-link" id="whatsapp-two" href="#" target="_blank" rel="noopener noreferrer">Send to 9985358726 <span aria-hidden="true">↗</span></a>
+              <button class="button button-quiet" id="edit-request" type="button">Edit request</button>
+            </div>
+            <p class="whatsapp-hint">WhatsApp will open with your message ready to send. Please tap Send in WhatsApp to share it.</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="section services-section" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <div><p class="eyebrow">HERE FOR YOUR EVERYDAY NEEDS</p><h2>Local care, made simple.</h2></div>
+            <p>Visit us in person or get in touch with your medicine request.</p>
+          </div>
+          <div class="services-grid">
+            <article class="service-card"><span class="service-icon">＋</span><h3>Medicine requests</h3><p>Share your medicine list through our website form or WhatsApp.</p></article>
+            <article class="service-card"><span class="service-icon">⌂</span><h3>Delivery or pickup</h3><p>Choose your preference. We’ll confirm local delivery availability with you.</p></article>
+            <article class="service-card"><span class="service-icon">◷</span><h3>Convenient hours</h3><p>We’re open every day from 7:30 in the morning until 10:30 at night.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="container">
+          <div class="section-heading">
+            <div><p class="eyebrow">A LITTLE LOOK AROUND</p><h2>Our store, in Srikakulam.</h2></div>
+            <p>We’d love to show you around. Visit us at Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001.</p>
+          </div>
+          <div class="gallery-grid" aria-label="Gowri Medicals store photo gallery">
+            <a class="gallery-card" href="images/gowri-medicals-interior.png" target="_blank" rel="noopener noreferrer" aria-label="View a larger photo of the inside of Gowri Medicals">
+              <img src="images/gowri-medicals-interior.png" alt="Inside Gowri Medicals, showing the medicine shelves and billing counter" loading="lazy">
+              <span class="gallery-caption"><strong>Inside the Store</strong><small>A look inside Gowri Medicals.</small></span>
+            </a>
+            <a class="gallery-card" href="images/gowri-medicals-storefront.png" target="_blank" rel="noopener noreferrer" aria-label="View a larger photo of the Gowri Medicals storefront">
+              <img src="images/gowri-medicals-storefront.png" alt="Gowri Medicals storefront at Balaga, Srikakulam" loading="lazy">
+              <span class="gallery-caption"><strong>Our Storefront</strong><small>Visit us at Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001.</small></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section location-section" id="location">
+        <div class="container location-card">
+          <div class="location-copy">
+            <p class="eyebrow">COME SAY HELLO</p>
+            <h2>Right here in<br>your neighbourhood.</h2>
+            <p class="location-address">Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001.</p>
+            <div class="location-hours"><span class="hours-icon" aria-hidden="true">◷</span><span><strong>Open every day</strong><br>7:30 AM – 10:30 PM</span></div>
+            <a class="button button-primary" id="official-shop-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=18.3178061%2C83.8949325" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" id="shop-directions-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=18.3178061%2C83.8949325&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="location-panel">
+            <div id="shop-map" class="location-map" role="region" aria-label="Map showing Gowri Medicals in Balaga, Srikakulam"></div>
+            <div class="map-fallback" id="shop-map-fallback" hidden>
+              <p id="shop-map-fallback-message">The shop map could not load. Use the official Google Maps location or directions instead.</p>
+              <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&amp;query=18.3178061%2C83.8949325" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=18.3178061%2C83.8949325&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="map-attribution">© <a href="https://openfreemap.org" target="_blank" rel="noopener noreferrer">OpenFreeMap</a> · © <a href="https://openmaptiles.org" target="_blank" rel="noopener noreferrer">OpenMapTiles</a> · © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="container faq-layout">
+          <div><p class="eyebrow">GOOD TO KNOW</p><h2>Frequently asked<br>questions.</h2><p class="telugu-copy" lang="te">మీకు సహాయం చేయడానికి మేము సిద్ధంగా ఉన్నాము.</p></div>
+          <div class="faq-list">
+            <details><summary>Is my medicine order confirmed when I submit the form?<span aria-hidden="true">＋</span></summary><p>No. The form prepares a request for you to send through WhatsApp. Your request is confirmed only after the shop checks availability and accepts it.</p></details>
+            <details><summary>Can I request doorstep delivery?<span aria-hidden="true">＋</span></summary><p>Yes. Choose Doorstep Delivery, then use GPS, select a map pin, or enter your address. The shop will confirm delivery coverage and timing with you.</p></details>
+            <details><summary>What are your working hours?<span aria-hidden="true">＋</span></summary><p>Gowri Medicals is open every day from 7:30 AM to 10:30 PM.</p></details>
+            <details><summary>Can I contact either of your WhatsApp numbers?<span aria-hidden="true">＋</span></summary><p>Yes. You can send your request to either 9989105144 or 9985358726 using the buttons above, or call either number directly.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-band">
+        <div class="container contact-band-inner">
+          <div><p class="eyebrow">WE’RE JUST A MESSAGE AWAY</p><h2>Need a hand? Talk to us.</h2><p>Call or WhatsApp either of our shop numbers.</p><p class="contact-address">Visit us: Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001.</p></div>
+          <div class="contact-actions"><a class="contact-number" href="tel:+919989105144"><span>PHONE / WHATSAPP 01</span><strong>+91 99891 05144</strong></a><a class="contact-number" href="tel:+919985358726"><span>PHONE / WHATSAPP 02</span><strong>+91 99853 58726</strong></a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 5v30M5 20h30" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/></svg></span><span class="brand-name">Gowri <strong>Medicals</strong><small>గౌరి మెడికల్స్</small></span></a>
+        <p>Your neighbourhood medical shop in Balaga, Srikakulam.<br><span lang="te">మీ ఆరోగ్యం మా బాధ్యత</span></p>
+        <div class="footer-links"><a href="#order">Medicine request</a><a href="#location">Location</a><a href="#faq">FAQs</a></div>
+      </div>
+      <div class="container footer-bottom"><span>© <span id="current-year"></span> Gowri Medicals. All rights reserved.</span><span>Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001.</span></div>
+    </footer>
+    <a class="floating-whatsapp" href="https://wa.me/919989105144?text=Hello%20Gowri%20Medicals%2C%20I%20have%20a%20medicine%20request." target="_blank" rel="noopener noreferrer" aria-label="Contact Gowri Medicals on WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.83 11.83 0 0 0 12.1 0C5.55 0 .22 5.32.22 11.88c0 2.1.55 4.15 1.6 5.96L.12 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.17-3.47-8.44ZM12.1 21.78a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.89-9.94 9.89Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.23-.65.08-.3-.15-1.26-.46-2.4-1.46-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.06 1.02-1.06 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.55.72.31 1.28.5 1.72.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.28-.2-.58-.35Z"/></svg>
+      <span>WhatsApp us</span>
+    </a>
+  </body>
+</html>
