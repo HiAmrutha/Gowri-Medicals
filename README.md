@@ -1,4 +1,6 @@
-# Gowri Medicals - Version 1.0
+# Gowri-Medicals
+
+## Gowri Medicals - Version 1.0
 
 A lightweight, responsive medical shop website built with plain HTML, CSS, and JavaScript. It uses a small dependency-free Node.js script to assemble the Netlify production folder; no framework, database, or paid services are required.
 
