@@ -88,8 +88,8 @@ const teluguTranslations = Object.freeze({
   "Tap the map to place your pin. Drag the pin to adjust it.": "మీ స్థానాన్ని గుర్తించడానికి మ్యాప్‌పై నొక్కండి. గుర్తును లాగి సరిచేయండి.",
   "Check the pin and address before confirming.": "నిర్ధారించే ముందు గుర్తు, చిరునామాను సరిచూడండి.",
   "Confirm Delivery Location": "డెలివరీ చిరునామాను నిర్ధారించండి",
+  "Confirm Location": "స్థానాన్ని నిర్ధారించండి",
   "Location confirmed": "స్థానం నిర్ధారించబడింది",
-  "Delivery location confirmed successfully.": "డెలివరీ చిరునామా విజయవంతంగా నిర్ధారించబడింది.",
   "Your location is confirmed. Use Edit Location if you need to change it.": "మీ స్థానం నిర్ధారించబడింది. మార్చాలంటే స్థానాన్ని సవరించండి.",
   "Your current location was found. Adjust the pin if needed, then confirm location.": "మీ ప్రస్తుత స్థానం లభించింది. అవసరమైతే గుర్తును సరిచేసి, స్థానాన్ని నిర్ధారించండి.",
   "Enter your address, then find it on the map. A locality name alone does not identify an exact location.": "మీ చిరునామాను నమోదు చేసి మ్యాప్‌లో వెతకండి. ప్రాంతం పేరు మాత్రమే ఖచ్చితమైన స్థలాన్ని గుర్తించదు.",
@@ -112,7 +112,6 @@ const teluguTranslations = Object.freeze({
   "Your delivery location is confirmed. Use Edit Location if you need to change it.": "మీ డెలివరీ చిరునామా నిర్ధారించబడింది. మార్చాలంటే చిరునామాను సవరించండి.",
   "Enter your address, then find it on the map. Locality names alone do not identify an exact delivery point.": "మీ చిరునామాను నమోదు చేసి మ్యాప్‌లో వెతకండి. ప్రాంతం పేరు మాత్రమే ఖచ్చితమైన డెలివరీ స్థలాన్ని గుర్తించదు.",
   "Location selected. Adjust the pin if needed, then confirm delivery location.": "స్థలం ఎంచుకున్నారు. అవసరమైతే గుర్తును సరిచేసి డెలివరీ చిరునామాను నిర్ధారించండి.",
-  "Map unavailable. Choose GPS or enter an address manually; the Google Maps directions link remains available.": "మ్యాప్ అందుబాటులో లేదు. GPS ఉపయోగించండి లేదా చిరునామాను చేతితో నమోదు చేయండి. Google Maps మార్గం అందుబాటులో ఉంటుంది.",
   "Current location requires browser permission and a secure connection (HTTPS or localhost). Select on Map or enter an address instead.": "ప్రస్తుత స్థానానికి బ్రౌజర్ అనుమతి, సురక్షిత కనెక్షన్ (HTTPS లేదా localhost) అవసరం. బదులుగా మ్యాప్‌లో ఎంచుకోండి లేదా చిరునామా నమోదు చేయండి.",
   "Your current location was found. Adjust the pin if needed, then confirm delivery location.": "మీ ప్రస్తుత స్థానం లభించింది. అవసరమైతే గుర్తును సరిచేసి, డెలివరీ చిరునామాను నిర్ధారించండి.",
   "Medicine request": "మందుల అభ్యర్థన",
@@ -296,7 +295,13 @@ const teluguTranslations = Object.freeze({
   "Location selected. Adjust the pin if needed, then confirm it.": "స్థలం ఎంచుకున్నారు. అవసరమైతే గుర్తును సరిచేసి, నిర్ధారించండి.",
   "Location selected — please confirm": "స్థలం ఎంచుకున్నారు — దయచేసి నిర్ధారించండి",
   "Delivery location confirmed": "డెలివరీ చిరునామా నిర్ధారించబడింది",
-  "Address not available; the map pin is the selected destination.": "చిరునామా అందుబాటులో లేదు; మ్యాప్‌లోని గుర్తించిన స్థలమే డెలివరీ చిరునామా.",
+  "Delivery location confirmed.": "డెలివరీ స్థానం నిర్ధారించబడింది.",
+  "Selected delivery pin": "ఎంచుకున్న డెలివరీ గుర్తు",
+  "No readable address found. Confirm the selected coordinates.": "చదవగల చిరునామా దొరకలేదు. ఎంచుకున్న కోఆర్డినేట్లను నిర్ధారించండి.",
+  "Try loading the map again": "మ్యాప్‌ను మళ్లీ లోడ్ చేయండి",
+  "MapLibre GL JS could not be loaded from the available public CDNs.": "అందుబాటులో ఉన్న పబ్లిక్ CDNల నుంచి MapLibre GL JS లోడ్ కాలేదు.",
+  "Select a valid location on the map.": "మ్యాప్‌లో సరైన స్థానాన్ని ఎంచుకోండి.",
+  "Selected map coordinates": "మ్యాప్‌లో ఎంచుకున్న కోఆర్డినేట్లు",
   "Location confirmed. Preparing your map and driving directions.": "చిరునామా నిర్ధారించబడింది. మ్యాప్, డ్రైవింగ్ మార్గాన్ని సిద్ధం చేస్తున్నాము.",
   "Your delivery location is confirmed for this request. The route and travel time are estimates.": "ఈ అభ్యర్థనకు మీ డెలివరీ చిరునామా నిర్ధారించబడింది. మార్గం, ప్రయాణ సమయం అంచనా మాత్రమే.",
   "Location confirmed. Road routing is unavailable, but the map pins and Google Maps directions are ready.": "చిరునామా నిర్ధారించబడింది. రహదారి మార్గం అందుబాటులో లేదు; మ్యాప్ గుర్తులు, గూగుల్ మ్యాప్స్ మార్గం సిద్ధంగా ఉన్నాయి.",
@@ -316,7 +321,6 @@ const teluguTranslations = Object.freeze({
   "Use the map to place the pin at your building, or try a more specific street or landmark.": "మీ ఇంటి వద్ద మ్యాప్ గుర్తును ఉంచండి లేదా మరింత స్పష్టమైన వీధి / గుర్తింపు స్థలాన్ని నమోదు చేయండి.",
   "The address was found, but the map did not load. Check your internet connection, then try Select on Map.": "చిరునామా దొరికింది, కానీ మ్యాప్ తెరుచుకోలేదు. ఇంటర్నెట్‌ను తనిఖీ చేసి, మళ్లీ మ్యాప్‌లో ఎంచుకోండి.",
   "The interactive map did not load. Check your internet connection.": "ఇంటరాక్టివ్ మ్యాప్ తెరుచుకోలేదు. మీ ఇంటర్నెట్‌ను తనిఖీ చేయండి.",
-  "The interactive map could not load. Check your internet connection.": "ఇంటరాక్టివ్ మ్యాప్ లోడ్ కాలేదు. మీ ఇంటర్నెట్‌ను తనిఖీ చేయండి.",
   "Map loading timed out. Check your internet connection and try again.": "మ్యాప్ తెరవడానికి ఎక్కువ సమయం పట్టింది. ఇంటర్నెట్‌ను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.",
   "Driving route could not be calculated. Google Maps directions are available below.": "డ్రైవింగ్ మార్గాన్ని లెక్కించలేకపోయాము. క్రింద గూగుల్ మ్యాప్స్ మార్గం అందుబాటులో ఉంది.",
   "Could not load the route map. Google Maps directions are available below.": "మార్గం మ్యాప్ తెరవలేకపోయాము. క్రింద గూగుల్ మ్యాప్స్ మార్గం అందుబాటులో ఉంది.",
@@ -376,6 +380,7 @@ const routeMetrics = document.querySelector("#route-metrics");
 const manualAddressForm = document.querySelector("#manual-address-form");
 const pickerMapPanel = document.querySelector("#picker-map-panel");
 const selectedLocationCard = document.querySelector("#selected-location-card");
+const locationConfirmationSuccess = document.querySelector("#location-confirmation-success");
 const deliveryLocationSection = document.querySelector("#route");
 const locationMethodButtons = [...document.querySelectorAll(".location-method")];
 const fulfilmentInputs = [...form.querySelectorAll('input[name="fulfilment"]')];
@@ -394,11 +399,11 @@ let gpsLocationAvailable = false;
 let latestOrder;
 let reverseLookupSequence = 0;
 let reverseLookupTimer;
+let routeRequestSequence = 0;
 const mapStyleUrl = "https://tiles.openfreemap.org/styles/liberty";
 
 document.querySelector("#official-shop-map-link").href = shopLocation.googleMapsUrl;
 document.querySelector("#shop-directions-link").href = shopLocation.directionsUrl;
-document.querySelector("#picker-map-fallback-link").href = shopLocation.googleMapsUrl;
 
 function translate(message) {
   return currentLanguage === "te" ? (teluguTranslations[message] || message) : message;
@@ -455,7 +460,7 @@ function setLanguage(language) {
     document.querySelector("#route-destination").textContent =
       confirmedLocation.address || translate("Selected map location");
     document.querySelector("#route-locality-label").textContent =
-      `${confirmedLocation.locality}, Srikakulam`;
+      confirmedLocation.locality || translate("Selected map coordinates");
   } else if (routeResults.hidden) {
     document.querySelector("#route-destination").textContent = translate("Your address");
     document.querySelector("#route-locality-label").textContent = "Srikakulam";
@@ -735,6 +740,9 @@ function syncLocationMethodPanels() {
 
 function setLocationMethod(method) {
   if (method !== activeLocationMethod) {
+    window.clearTimeout(reverseLookupTimer);
+    reverseLookupSequence += 1;
+    routeRequestSequence += 1;
     selectedLocation = null;
     confirmedLocation = null;
     gpsLocationAvailable = false;
@@ -753,6 +761,10 @@ function setLocationMethod(method) {
 
 function updateFulfilmentFields() {
   const fulfilment = form.querySelector('input[name="fulfilment"]:checked')?.value;
+  if (fulfilment !== "Doorstep Delivery") {
+    routeRequestSequence += 1;
+    routeResults.hidden = true;
+  }
   if (fulfilment === "Doorstep Delivery" && activeLocationMethod === "skip") {
     activeLocationMethod = undefined;
   }
@@ -763,6 +775,7 @@ function updateFulfilmentFields() {
       ? "Share and confirm your exact location for doorstep delivery."
       : "For shop pickup, sharing your location is optional."
   );
+  if (selectedLocation) updateSelectedLocationCard();
   updateFulfilmentHoursStatus();
 }
 
@@ -820,7 +833,7 @@ form.addEventListener("submit", (event) => {
     name: String(data.get("name")).trim(),
     mobile,
     fulfilment,
-    destination: confirmedLocation || null,
+    destination: fulfilment === "Doorstep Delivery" ? confirmedLocation || null : null,
     medicines,
     instructions: String(data.get("instructions") || "").trim(),
     urgent: data.get("urgent") === "on"
@@ -862,43 +875,94 @@ function loadMapLibre() {
   if (window.maplibregl) return Promise.resolve(window.maplibregl);
   if (mapLibrePromise) return mapLibrePromise;
 
-  let stylesheet = document.querySelector("#maplibre-stylesheet");
-  if (!stylesheet) {
+  const cdns = [
+    {
+      name: "jsDelivr",
+      script: "https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.1/dist/maplibre-gl.js",
+      stylesheet: "https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.1/dist/maplibre-gl.css"
+    },
+    {
+      name: "unpkg",
+      script: "https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js",
+      stylesheet: "https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css"
+    }
+  ];
+
+  const loadStylesheet = (url) => new Promise((resolve, reject) => {
+    let stylesheet = document.querySelector("#maplibre-stylesheet");
+    if (stylesheet?.href === url && stylesheet.sheet) {
+      resolve();
+      return;
+    }
+    stylesheet?.remove();
     stylesheet = document.createElement("link");
     stylesheet.id = "maplibre-stylesheet";
     stylesheet.rel = "stylesheet";
-    stylesheet.href = "https://cdn.jsdelivr.net/npm/maplibre-gl@6.16.0/dist/maplibre-gl.css";
-  }
+    stylesheet.href = url;
+    const timeout = window.setTimeout(() => finish(new Error(`${url} timed out.`)), 10000);
+    const finish = (error) => {
+      window.clearTimeout(timeout);
+      stylesheet.removeEventListener("load", onLoad);
+      stylesheet.removeEventListener("error", onError);
+      if (error) {
+        stylesheet.remove();
+        reject(error);
+      } else {
+        resolve();
+      }
+    };
+    const onLoad = () => finish();
+    const onError = () => finish(new Error(`${url} could not be loaded.`));
+    stylesheet.addEventListener("load", onLoad, { once: true });
+    stylesheet.addEventListener("error", onError, { once: true });
+    document.head.append(stylesheet);
+  });
 
-  const stylesheetPromise = stylesheet.sheet
-    ? Promise.resolve()
-    : new Promise((resolve, reject) => {
-        const timeout = window.setTimeout(() => {
-          reject(new Error("MapLibre stylesheet loading timed out."));
-        }, 10000);
-        const finish = (error) => {
-          window.clearTimeout(timeout);
-          stylesheet.removeEventListener("load", onLoad);
-          stylesheet.removeEventListener("error", onError);
-          if (error) reject(error);
-          else resolve();
-        };
-        const onLoad = () => finish();
-        const onError = () => finish(new Error("MapLibre stylesheet could not load."));
-        stylesheet.addEventListener("load", onLoad, { once: true });
-        stylesheet.addEventListener("error", onError, { once: true });
-        if (!stylesheet.isConnected) document.head.append(stylesheet);
-      });
-  mapLibrePromise = Promise.all([
-    import("https://cdn.jsdelivr.net/npm/maplibre-gl@6.16.0/dist/maplibre-gl.mjs"),
-    stylesheetPromise
-  ]).then(([maplibregl]) => {
-      window.maplibregl = maplibregl;
-      return maplibregl;
-    }).catch(() => {
+  const loadScript = (url) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.crossOrigin = "anonymous";
+    script.src = url;
+    const timeout = window.setTimeout(() => finish(new Error(`${url} timed out.`)), 10000);
+    const finish = (error) => {
+      window.clearTimeout(timeout);
+      script.removeEventListener("load", onLoad);
+      script.removeEventListener("error", onError);
+      if (error) {
+        script.remove();
+        reject(error);
+      } else if (window.maplibregl?.Map) {
+        resolve(window.maplibregl);
+      } else {
+        script.remove();
+        reject(new Error(`${url} loaded without exposing the MapLibre GL JS API.`));
+      }
+    };
+    const onLoad = () => finish();
+    const onError = () => finish(new Error(`${url} could not be loaded.`));
+    script.addEventListener("load", onLoad, { once: true });
+    script.addEventListener("error", onError, { once: true });
+    document.head.append(script);
+  });
+
+  mapLibrePromise = (async () => {
+    const errors = [];
+    for (const cdn of cdns) {
+      try {
+        const [, maplibregl] = await Promise.all([
+          loadStylesheet(cdn.stylesheet),
+          loadScript(cdn.script)
+        ]);
+        return maplibregl;
+      } catch (error) {
+        errors.push(`${cdn.name}: ${error.message}`);
+      }
+    }
+    document.querySelector("#maplibre-stylesheet")?.remove();
+    throw new Error(`${translate("MapLibre GL JS could not be loaded from the available public CDNs.")} ${errors.join(" ")}`);
+  })().catch((error) => {
     mapLibrePromise = null;
-    stylesheet.remove();
-    throw new Error(translate("The interactive map could not load. Check your internet connection."));
+    throw error;
   });
   return mapLibrePromise;
 }
@@ -914,12 +978,14 @@ function createMap(elementId, zoom = 16) {
   });
   map.addControl(new window.maplibregl.NavigationControl({ showCompass: false }), "top-right");
 
+  let lastMapError;
   const ready = new Promise((resolve, reject) => {
     let settled = false;
     const timeout = window.setTimeout(() => {
       if (settled) return;
       settled = true;
-      reject(new Error(translate("Map loading timed out. Check your internet connection and try again.")));
+      const details = lastMapError?.message ? ` ${lastMapError.message}` : "";
+      reject(new Error(`${translate("Map loading timed out. Check your internet connection and try again.")}${details}`));
     }, 20000);
     map.once("load", () => {
       if (settled) return;
@@ -928,11 +994,8 @@ function createMap(elementId, zoom = 16) {
       translateDocument();
       resolve(map);
     });
-    map.on("error", () => {
-      if (settled) return;
-      settled = true;
-      window.clearTimeout(timeout);
-      reject(new Error(translate("The interactive map could not load. Check your internet connection.")));
+    map.on("error", (event) => {
+      lastMapError = event.error || lastMapError;
     });
   });
   mapReadyPromises.set(map, ready);
@@ -1052,16 +1115,21 @@ function updateSelectedLocationCard() {
     return;
   }
   selectedLocationCard.hidden = false;
-  selectedLocationCard.hidden = false;
+  const isDoorstepDelivery =
+    form.querySelector('input[name="fulfilment"]:checked')?.value === "Doorstep Delivery";
   document.querySelector("#selected-location-title").textContent = translate(
     confirmedLocation ? "Location confirmed" : "Location selected — please confirm"
   );
   document.querySelector("#selected-location-address").textContent =
-    selectedLocation.address || translate("Address not available; the map pin is the selected destination.");
+    selectedLocation.address || translate("No readable address found. Confirm the selected coordinates.");
+  locationConfirmationSuccess.textContent = translate(
+    isDoorstepDelivery ? "Delivery location confirmed." : "Location confirmed"
+  );
+  locationConfirmationSuccess.hidden = !confirmedLocation;
   document.querySelector("#selected-coordinates").textContent =
     `${translate("Latitude:")} ${selectedLocation.latitude.toFixed(6)} · ${translate("Longitude:")} ${selectedLocation.longitude.toFixed(6)}`;
   const confirmButton = document.querySelector("#confirm-selected-location");
-  confirmButton.textContent = translate("Confirm Delivery Location");
+  confirmButton.textContent = translate(isDoorstepDelivery ? "Confirm Delivery Location" : "Confirm Location");
   confirmButton.hidden = Boolean(confirmedLocation);
   const editButton = document.querySelector("#edit-selected-location");
   editButton.textContent = translate("Edit Location");
@@ -1078,7 +1146,8 @@ function showPickerMapFallback(error) {
     `${error.message} ${translate("You can still use GPS or enter an address manually.")}`;
   fallbackLink.href = selectedLocation
     ? createGoogleDirectionsLink(selectedLocation)
-    : shopLocation.googleMapsUrl;
+    : "#";
+  fallbackLink.hidden = !selectedLocation;
   fallbackLink.innerHTML = `${translate(selectedLocation ? "Open Directions in Google Maps" : "Open in Google Maps")} <span aria-hidden="true">↗</span>`;
 }
 
@@ -1090,18 +1159,20 @@ function showPickerMap() {
 
 function addPlaceFromReverseGeocode(properties) {
   const localPlace = properties.suburb || properties.city_district || properties.city ||
-    properties.county || properties.district || "Srikakulam Town";
+    properties.county || properties.district || "";
   const localitySelect = manualAddressForm.querySelector('[name="manual-locality"]');
-  let option = [...localitySelect.options].find((item) =>
-    item.value.toLowerCase() === localPlace.toLowerCase()
-  );
-  if (!option) {
-    option = document.createElement("option");
-    option.value = localPlace;
-    option.textContent = localPlace;
-    localitySelect.add(option);
+  if (localPlace) {
+    let option = [...localitySelect.options].find((item) =>
+      item.value.toLowerCase() === localPlace.toLowerCase()
+    );
+    if (!option) {
+      option = document.createElement("option");
+      option.value = localPlace;
+      option.textContent = localPlace;
+      localitySelect.add(option);
+    }
+    localitySelect.value = localPlace;
   }
-  localitySelect.value = localPlace;
   const street = properties.street || properties.road || properties.pedestrian || "";
   const building = properties.housenumber || properties.name || "";
   manualAddressForm.querySelector('[name="street"]').value = street;
@@ -1110,7 +1181,7 @@ function addPlaceFromReverseGeocode(properties) {
     manualAddressForm.querySelector('[name="landmark"]').value = properties.name;
   }
   manualAddressForm.querySelector('[name="delivery-instructions"]').value = selectedLocation.instructions || "";
-  selectedLocation.locality = localPlace;
+  selectedLocation.locality = localPlace || selectedLocation.locality;
   selectedLocation.address = formatManualAddress({
     building,
     street
@@ -1124,8 +1195,7 @@ function addPlaceFromReverseGeocode(properties) {
   updateSelectedLocationCard();
 }
 
-async function reverseGeocodeLocation(latitude, longitude) {
-  const sequence = ++reverseLookupSequence;
+async function reverseGeocodeLocation(latitude, longitude, sequence) {
   const query = new URLSearchParams({
     lat: String(latitude),
     lon: String(longitude),
@@ -1136,13 +1206,17 @@ async function reverseGeocodeLocation(latitude, longitude) {
       `https://photon.komoot.io/reverse?${query}`,
       "Could not resolve the selected address"
     );
-    if (sequence !== reverseLookupSequence || !selectedLocation) return;
+    if (sequence !== reverseLookupSequence || !selectedLocation ||
+        selectedLocation.latitude !== latitude || selectedLocation.longitude !== longitude) return;
     const place = response.features?.[0];
     if (!place) return;
-    const properties = place.properties;
-    if ((properties.city || properties.district || "").toLowerCase().indexOf("srikakulam") === -1 &&
-        !isWithinSrikakulam(latitude, longitude)) return;
-    addPlaceFromReverseGeocode(properties);
+    if (!place.properties || !Array.isArray(place.geometry?.coordinates)) return;
+    const [resultLongitude, resultLatitude] = place.geometry.coordinates.map(Number);
+    if (!Number.isFinite(resultLatitude) || !Number.isFinite(resultLongitude)) return;
+    const latitudeDistance = (resultLatitude - latitude) * 111000;
+    const longitudeDistance = (resultLongitude - longitude) * 111000 * Math.cos(latitude * Math.PI / 180);
+    if (Math.hypot(latitudeDistance, longitudeDistance) > 1000) return;
+    addPlaceFromReverseGeocode(place.properties);
   } catch {
     if (sequence === reverseLookupSequence) {
       setRouteStatus("The pin is selected, but its address could not be resolved. You can still confirm the map location.", "error");
@@ -1151,7 +1225,12 @@ async function reverseGeocodeLocation(latitude, longitude) {
 }
 
 function selectLocation(latitude, longitude, source, address = "") {
-  if (!isWithinSrikakulam(latitude, longitude)) {
+  if (!Number.isFinite(latitude) || !Number.isFinite(longitude) ||
+      latitude < -90 || latitude > 90 || longitude < -180 || longitude > 180) {
+    setRouteStatus("Select a valid location on the map.", "error");
+    return;
+  }
+  if (source !== "map" && !isWithinSrikakulam(latitude, longitude)) {
     if (pickerMarker && selectedLocation) {
       pickerMarker.setLngLat([selectedLocation.longitude, selectedLocation.latitude]);
     }
@@ -1159,11 +1238,13 @@ function selectLocation(latitude, longitude, source, address = "") {
     return;
   }
 
+  window.clearTimeout(reverseLookupTimer);
+  const lookupSequence = ++reverseLookupSequence;
+  routeRequestSequence += 1;
   confirmedLocation = null;
   document.querySelector(".submit-button").disabled =
     form.querySelector('input[name="fulfilment"]:checked')?.value !== "Shop Pickup";
-  const preserveManualAddress = source === "manual" ||
-    (source === "map" && selectedLocation?.manualAddress);
+  const preserveManualAddress = source === "manual";
   const manual = preserveManualAddress
     ? getManualAddress()
     : { locality: "", street: "", building: "", landmark: "", instructions: "" };
@@ -1172,7 +1253,7 @@ function selectLocation(latitude, longitude, source, address = "") {
     longitude,
     source,
     manualAddress: preserveManualAddress,
-    locality: manual.locality || "Srikakulam Town",
+    locality: manual.locality || (source === "map" ? "" : "Srikakulam Town"),
     address: address || formatManualAddress(manual),
     landmark: manual.landmark,
     instructions: manual.instructions
@@ -1203,9 +1284,8 @@ function selectLocation(latitude, longitude, source, address = "") {
     createGoogleDirectionsLink(selectedLocation);
 
   if (source !== "manual") {
-    window.clearTimeout(reverseLookupTimer);
     reverseLookupTimer = window.setTimeout(() => {
-      void reverseGeocodeLocation(latitude, longitude);
+      void reverseGeocodeLocation(latitude, longitude, lookupSequence);
     }, 350);
   }
 }
@@ -1218,7 +1298,7 @@ function updateAddressSuggestions(places, queryText) {
   const tokens = queryText.toLowerCase().match(/[a-z0-9]{3,}/g) || [];
   const genericTokens = new Set([
     "andhra", "behind", "building", "colony", "district", "house", "landmark",
-    "near", "opposite", "pradesh", "road", "street", "srikakulam", "town"
+    "india", "near", "opposite", "pradesh", "road", "street", "srikakulam", "town"
   ]);
   const specificTokens = tokens.filter((token) => !genericTokens.has(token));
   const matches = places.features.filter((place) => {
@@ -1277,7 +1357,7 @@ function updateAddressSuggestions(places, queryText) {
 
 const addressSuggestions = document.querySelector("#address-suggestions");
 
-document.querySelector("#show-picker-map").addEventListener("click", async () => {
+async function openPickerMap() {
   setLocationMethod("map");
   showPickerMap();
   try {
@@ -1288,9 +1368,12 @@ document.querySelector("#show-picker-map").addEventListener("click", async () =>
     setRouteStatus("Tap the map to place your pin. Drag the pin to adjust it.");
   } catch (error) {
     showPickerMapFallback(error);
-    setRouteStatus("Map unavailable. Choose GPS or enter an address manually; the Google Maps directions link remains available.", "error");
+    setRouteStatus("Map unavailable. Choose GPS or enter an address manually.", "error");
   }
-});
+}
+
+document.querySelector("#show-picker-map").addEventListener("click", openPickerMap);
+document.querySelector("#retry-picker-map").addEventListener("click", openPickerMap);
 
 document.querySelector("#show-manual-address").addEventListener("click", () => {
   setLocationMethod("manual");
@@ -1461,7 +1544,14 @@ function clearRouteLayers(map) {
   routeHasLine = false;
 }
 
-async function showRoute(destination) {
+function isCurrentRouteRequest(destination, sequence) {
+  return sequence === routeRequestSequence && confirmedLocation &&
+    destination.latitude === confirmedLocation.latitude &&
+    destination.longitude === confirmedLocation.longitude;
+}
+
+async function showRoute(destination, sequence) {
+  if (!isCurrentRouteRequest(destination, sequence)) return false;
   routeResults.hidden = false;
   routeMapWrap.hidden = false;
   routeGoogleLink.href = createGoogleDirectionsLink(destination);
@@ -1471,8 +1561,9 @@ async function showRoute(destination) {
   document.querySelector("#route-destination").textContent =
     destination.address || translate("Selected map location");
   document.querySelector("#route-locality-label").textContent =
-    `${destination.locality}, Srikakulam`;
+    destination.locality || translate("Selected map coordinates");
   const map = await getRouteMap();
+  if (!isCurrentRouteRequest(destination, sequence)) return false;
   clearRouteLayers(map);
 
   const shopElement = document.createElement("div");
@@ -1495,12 +1586,14 @@ async function showRoute(destination) {
   try {
     response = await fetchJson(routeUrl, "Could not calculate the road route");
   } catch {
+    if (!isCurrentRouteRequest(destination, sequence)) return false;
     document.querySelector("#route-result-note").textContent = translate(
       "Driving route could not be calculated. Google Maps directions are available below."
     );
     setRouteStatus("Location confirmed. Road routing is unavailable, but the map pins and Google Maps directions are ready.", "error");
     return false;
   }
+  if (!isCurrentRouteRequest(destination, sequence)) return false;
   const route = response.routes?.[0];
   if (response.code !== "Ok" || !route || !route.geometry ||
       !Number.isFinite(route.distance) || !Number.isFinite(route.duration)) {
@@ -1561,33 +1654,36 @@ async function confirmSelectedLocation() {
     form.querySelector('input[name="fulfilment"]:checked')?.value === "Doorstep Delivery";
   if (!isDoorstepDelivery) {
     routeResults.hidden = true;
-    setRouteStatus("Delivery location confirmed successfully.");
     return;
   }
-  setRouteStatus("Delivery location confirmed successfully.");
-
-  try {
-    await showRoute(confirmedLocation);
-  } catch {
+  setRouteStatus("Delivery location confirmed.");
+  const destination = { ...confirmedLocation };
+  const requestSequence = ++routeRequestSequence;
+  void showRoute(destination, requestSequence).catch((error) => {
+    if (requestSequence !== routeRequestSequence) return;
     routeResults.hidden = false;
     routeMapWrap.hidden = true;
     routeMetrics.hidden = true;
-    routeGoogleLink.href = createGoogleDirectionsLink(confirmedLocation);
+    routeGoogleLink.href = createGoogleDirectionsLink(destination);
     routeGoogleLink.innerHTML = `${translate("Open Directions in Google Maps")} <span aria-hidden="true">↗</span>`;
     routeGoogleLink.hidden = false;
     document.querySelector("#route-destination").textContent =
-      confirmedLocation.address || translate("Selected map location");
+      destination.address || translate("Selected map location");
     document.querySelector("#route-locality-label").textContent =
-      `${confirmedLocation.locality}, Srikakulam`;
+      destination.locality || translate("Selected map coordinates");
     document.querySelector("#route-result-note").textContent = translate(
       "Map unavailable. You can still open Google Maps using your selected coordinates."
     );
-  }
-  setRouteStatus("Delivery location confirmed successfully.");
+    setRouteStatus("Location confirmed. The on-page map or route could not load; Google Maps directions are ready below.", "error");
+    console.error("Could not display the confirmed delivery route.", error);
+  });
 }
 
 document.querySelector("#confirm-selected-location").addEventListener("click", confirmSelectedLocation);
 document.querySelector("#edit-selected-location").addEventListener("click", () => {
+  window.clearTimeout(reverseLookupTimer);
+  reverseLookupSequence += 1;
+  routeRequestSequence += 1;
   confirmedLocation = null;
   selectedLocationCard.hidden = false;
   routeResults.hidden = true;
@@ -1598,6 +1694,7 @@ document.querySelector("#edit-selected-location").addEventListener("click", () =
 manualAddressForm.querySelector('[name="manual-locality"]').addEventListener("change", () => {
   if (!selectedLocation) return;
   selectedLocation.locality = manualAddressForm.querySelector('[name="manual-locality"]').value;
+  routeRequestSequence += 1;
   confirmedLocation = null;
   updateSelectedLocationCard();
   syncLocationMethodPanels();

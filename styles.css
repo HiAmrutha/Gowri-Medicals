@@ -268,11 +268,15 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 3.8vw, 42px); line-height: 1.2; le
 .selected-location-card { margin-top: 16px; padding: 15px; border: 1px solid #315b3c; border-radius: 7px; background: #102219; }
 .selected-location-card > div { display: flex; align-items: center; gap: 9px; font-size: 12px; }
 .selected-location-card > p { margin: 9px 0 0; color: #c1d0c4; font-size: 11px; overflow-wrap: anywhere; }
+.selected-location-card .selected-pin-preview { width: fit-content; margin-top: 12px; padding: 6px 9px; border: 1px solid var(--line-bright); border-radius: 5px; color: var(--text-soft); font-size: 10px; }
+.selected-pin-icon { color: var(--green-bright); font-size: 16px; }
 .selected-location-card .selected-coordinates { color: var(--green-bright); font-size: 10px; }
 .selected-location-card .selected-location-hint { color: var(--muted); font-size: 10px; }
+.selected-location-card .location-confirmation-success { color: var(--green-bright); font-weight: 700; }
 .selected-location-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 13px; }
 .selected-location-actions .button { min-height: 40px; }
 .selected-location-actions .button[hidden] { display: none; }
+.selected-location-actions #confirm-selected-location:not([hidden]) { box-shadow: 0 0 0 1px rgb(132 214 154 / 28%); }
 .location-picker button:disabled { opacity: .6; cursor: wait; }
 .route-availability { margin: 12px 0 0; color: var(--muted); font-size: 10px; }
 .route-status { margin: 17px 0 0; padding: 12px 14px; border: 1px solid var(--line-bright); border-radius: 6px; background: #102018; color: #cbd9ce; font-size: 12px; }
