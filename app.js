@@ -6,6 +6,13 @@ const summary = document.querySelector("#order-summary");
 const summaryContent = document.querySelector("#summary-content");
 const editRequestButton = document.querySelector("#edit-request");
 const shopNumbers = ["919989105144", "919985358726"];
+const fulfilmentHoursStatus = document.querySelector("#fulfilment-hours-status");
+const shopTimeFormatter = new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Asia/Kolkata",
+  hour: "2-digit",
+  minute: "2-digit",
+  hourCycle: "h23"
+});
 const shopLocation = Object.freeze({
   latitude: 18.3178061,
   longitude: 83.8949325,
@@ -34,7 +41,16 @@ const teluguTranslations = Object.freeze({
   "Request medicines": "మందులు కోరండి",
   "Get directions": "మార్గం చూడండి",
   "Open every day": "ప్రతిరోజూ తెరిచి ఉంటుంది",
-  "7:30 AM – 10:30 PM": "ఉదయం 7:30 – రాత్రి 10:30",
+  "Shop Hours": "దుకాణం వేళలు",
+  "Shop Hours:": "దుకాణం వేళలు:",
+  "Home Delivery:": "హోమ్ డెలివరీ:",
+  "Every day, 8:00 AM – 10:00 PM": "ప్రతిరోజూ, ఉదయం 8:00 – రాత్రి 10:00",
+  "Every day, 10:00 AM – 9:00 PM": "ప్రతిరోజూ, ఉదయం 10:00 – రాత్రి 9:00",
+  "Shop pickup: 8:00 AM – 10:00 PM every day": "దుకాణం నుంచి తీసుకోవడం: ప్రతిరోజూ ఉదయం 8:00 – రాత్రి 10:00",
+  "Home delivery: 10:00 AM – 9:00 PM every day": "హోమ్ డెలివరీ: ప్రతిరోజూ ఉదయం 10:00 – రాత్రి 9:00",
+  "Service hours": "సేవల వేళలు",
+  "Doorstep delivery is available only between 10:00 AM and 9:00 PM. You can still send a request; Gowri Medicals will confirm availability.": "ఇంటి వద్ద డెలివరీ ప్రతిరోజూ ఉదయం 10:00 నుంచి రాత్రి 9:00 వరకు మాత్రమే అందుబాటులో ఉంటుంది. మీరు అభ్యర్థన పంపవచ్చు; లభ్యతను గౌరి మెడికల్స్ నిర్ధారిస్తుంది.",
+  "Shop pickup is available only between 8:00 AM and 10:00 PM. You can still send a request; Gowri Medicals will confirm availability.": "దుకాణం నుంచి మందులు ప్రతిరోజూ ఉదయం 8:00 నుంచి రాత్రి 10:00 వరకు మాత్రమే తీసుకోవచ్చు. మీరు అభ్యర్థన పంపవచ్చు; లభ్యతను గౌరి మెడికల్స్ నిర్ధారిస్తుంది.",
   "Gowri Medicals medical shop": "Gowri Medicals మెడికల్ షాప్",
   "HERE FOR YOU": "మీ సేవలో",
   "YOUR LOCAL MEDICAL SHOP": "మీ దగ్గరలోని మెడికల్ షాప్",
@@ -43,8 +59,6 @@ const teluguTranslations = Object.freeze({
   "Medical shop highlights": "మా మెడికల్ షాప్ ప్రత్యేకతలు",
   "Friendly local care": "ఆప్యాయమైన స్థానిక సేవ",
   "మీకు దగ్గరగా, మీతో పాటు": "మీకు దగ్గరగా, మీతో పాటు",
-  "Open until 10:30 PM": "రాత్రి 10:30 వరకు తెరిచి ఉంటుంది",
-  "Every day, 7:30 AM – 10:30 PM": "ప్రతిరోజూ, ఉదయం 7:30 – రాత్రి 10:30",
   "Easy medicine requests": "మందుల కోసం సులభంగా కోరండి",
   "WhatsApp us or use our order form": "వాట్సాప్ చేయండి లేదా ఆర్డర్ ఫారమ్ నింపండి",
   "ABOUT GOWRI MEDICALS": "గౌరి మెడికల్స్ గురించి",
@@ -53,12 +67,6 @@ const teluguTranslations = Object.freeze({
   "At Gowri Medicals, we’re here to make everyday medicine needs feel simple and personal. Visit us at Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001, or send a medicine request from wherever you are in Srikakulam.": "రోజువారీ మందుల అవసరాలను సులభంగా తీర్చేందుకు Gowri Medicals మీకు తోడుగా ఉంటుంది. Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001లోని మా దుకాణాన్ని సందర్శించండి లేదా Srikakulamలో ఎక్కడి నుంచైనా మందుల వివరాలు పంపండి.",
   "మీ కుటుంబ ఆరోగ్య సంరక్షణ కోసం మేము ఎల్లప్పుడూ మీకు దగ్గరగా ఉంటాము.": "మీ కుటుంబ ఆరోగ్య సంరక్షణలో మేము ఎల్లప్పుడూ మీకు తోడుగా ఉంటాము.",
   "Find our shop": "మా దుకాణాన్ని కనుగొనండి",
-  "OWNERS OF GOWRI MEDICALS": "Gowri Medicals యజమానులు",
-  "Meet Our Owners": "మా యజమానులను కలవండి",
-  "The People Behind Gowri Medicals": "Gowri Medicals‌ను నడిపించే వారు",
-  "K. Satish, owner of Gowri Medicals": "Gowri Medicals యజమాని K. Satish",
-  "OWNER": "యజమాని",
-  "G. Srinivasa Rao, owner of Gowri Medicals": "Gowri Medicals యజమాని G. Srinivasa Rao",
   "A SIMPLE WAY TO REQUEST": "మందులు కోరడానికి సులభమైన మార్గం",
   "Medicine, made easier.": "మందులు కోరడం ఇప్పుడు సులభం.",
   "Share what you need. We’ll confirm availability and delivery or pickup details with you.": "మీకు కావాల్సిన మందుల వివరాలు పంపండి. లభ్యత, డెలివరీ లేదా దుకాణం నుంచి తీసుకునే వివరాలను మేము మీకు తెలియజేస్తాము.",
@@ -136,7 +144,6 @@ const teluguTranslations = Object.freeze({
   "Delivery or pickup": "డెలివరీ లేదా దుకాణం నుంచి తీసుకోవడం",
   "Choose your preference. We’ll confirm local delivery availability with you.": "మీకు నచ్చిన విధానాన్ని ఎంచుకోండి. మీ ప్రాంతానికి డెలివరీ ఉందో లేదో మేము నిర్ధారిస్తాము.",
   "Convenient hours": "అనుకూలమైన పని వేళలు",
-  "We’re open every day from 7:30 in the morning until 10:30 at night.": "మేము ప్రతిరోజూ ఉదయం 7:30 నుంచి రాత్రి 10:30 వరకు తెరిచి ఉంటాము.",
   "A LITTLE LOOK AROUND": "మా దుకాణాన్ని చూడండి",
   "Our store, in Srikakulam.": "Srikakulamలోని మా దుకాణం.",
   "We’d love to show you around. Visit us at Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001.": "Balaga Road, Bondilipuram, Balaga, Srikakulam, Andhra Pradesh – 532001లోని మా దుకాణాన్ని సందర్శించండి.",
@@ -180,7 +187,7 @@ const teluguTranslations = Object.freeze({
   "Location selected": "స్థలం ఎంచుకున్నారు",
   "The pin can be moved before you confirm the location.": "నిర్ధారించే ముందు గుర్తును కదిలించవచ్చు.",
   "Confirm This Location": "ఈ చిరునామాను నిర్ధారించండి",
-  "Delivery availability and timing are confirmed by Gowri Medicals.": "డెలివరీ లభ్యత, సమయాన్ని గౌరి మెడికల్స్ నిర్ధారిస్తుంది.",
+  "Home delivery is available every day from 10:00 AM to 9:00 PM. Gowri Medicals will confirm delivery availability.": "హోమ్ డెలివరీ ప్రతిరోజూ ఉదయం 10:00 నుంచి రాత్రి 9:00 వరకు అందుబాటులో ఉంటుంది. డెలివరీ లభ్యతను గౌరి మెడికల్స్ నిర్ధారిస్తుంది.",
   "STARTING POINT": "ప్రారంభ స్థలం",
   "DESTINATION": "చేరాల్సిన స్థలం",
   "Your address": "మీ చిరునామా",
@@ -196,9 +203,9 @@ const teluguTranslations = Object.freeze({
   "Is my medicine order confirmed when I submit the form?": "ఫారమ్ పంపగానే నా మందుల ఆర్డర్ ఖరారు అవుతుందా?",
   "No. The form prepares a request for you to send through WhatsApp. Your request is confirmed only after the shop checks availability and accepts it.": "కాదు. ఈ ఫారమ్ వాట్సాప్‌లో పంపడానికి అభ్యర్థనను సిద్ధం చేస్తుంది. మందులు ఉన్నాయని దుకాణం నిర్ధారించి అంగీకరించిన తర్వాతే మీ అభ్యర్థన ఖరారు అవుతుంది.",
   "Can I request doorstep delivery?": "ఇంటి వద్ద డెలివరీ కోరవచ్చా?",
-  "Yes. Choose Doorstep Delivery, then use GPS, select a map pin, or enter your address. The shop will confirm delivery coverage and timing with you.": "అవును. ఇంటి వద్ద డెలివరీ ఎంచుకుని GPS ఉపయోగించండి, మ్యాప్‌లో గుర్తు పెట్టండి లేదా చిరునామా నమోదు చేయండి. డెలివరీ లభ్యత, సమయాన్ని దుకాణం నిర్ధారిస్తుంది.",
+  "Yes. Choose Doorstep Delivery, then use GPS, select a map pin, or enter your address. Home delivery is available every day from 10:00 AM to 9:00 PM. The shop will confirm delivery coverage and acceptance.": "అవును. ఇంటి వద్ద డెలివరీ ఎంచుకుని GPS ఉపయోగించండి, మ్యాప్‌లో గుర్తు పెట్టండి లేదా చిరునామా నమోదు చేయండి. హోమ్ డెలివరీ ప్రతిరోజూ ఉదయం 10:00 నుంచి రాత్రి 9:00 వరకు అందుబాటులో ఉంటుంది. డెలివరీ లభ్యతను దుకాణం నిర్ధారిస్తుంది.",
   "What are your working hours?": "దుకాణం పని వేళలు ఏమిటి?",
-  "Gowri Medicals is open every day from 7:30 AM to 10:30 PM.": "Gowri Medicals ప్రతిరోజూ ఉదయం 7:30 నుంచి రాత్రి 10:30 వరకు తెరిచి ఉంటుంది.",
+  "Shop Hours: Every day, 8:00 AM – 10:00 PM. Home Delivery: Every day, 10:00 AM – 9:00 PM.": "దుకాణం వేళలు: ప్రతిరోజూ ఉదయం 8:00 – రాత్రి 10:00. హోమ్ డెలివరీ: ప్రతిరోజూ ఉదయం 10:00 – రాత్రి 9:00.",
   "Can I contact either of your WhatsApp numbers?": "మీ వాట్సాప్ నంబర్లలో దేనికైనా సంప్రదించవచ్చా?",
   "Yes. You can send your request to either 9989105144 or 9985358726 using the buttons above, or call either number directly.": "అవును. పైన ఉన్న బటన్ల ద్వారా 9989105144 లేదా 9985358726కు అభ్యర్థన పంపవచ్చు లేదా నేరుగా ఫోన్ చేయవచ్చు.",
   "WE’RE JUST A MESSAGE AWAY": "మాకు సందేశం పంపండి",
@@ -442,6 +449,7 @@ function setLanguage(language) {
     // The preference remains active for the current page if storage is unavailable.
   }
   translateDocument();
+  updateFulfilmentHoursStatus();
   if (selectedLocation) updateSelectedLocationCard();
   if (confirmedLocation && !routeResults.hidden) {
     document.querySelector("#route-destination").textContent =
@@ -565,6 +573,12 @@ function buildSummary(order) {
   addSummaryItem("Customer", order.name);
   addSummaryItem("Mobile", order.mobile);
   addSummaryItem("Preference", translate(order.fulfilment));
+  addSummaryItem(
+    "Service hours",
+    translate(order.fulfilment === "Doorstep Delivery"
+      ? "Home delivery: 10:00 AM – 9:00 PM every day"
+      : "Shop pickup: 8:00 AM – 10:00 PM every day")
+  );
   addSummaryItem("Gowri Medicals Shop Location:", shopLocation.address);
   addSummaryLink("Shop Google Maps:", "Open shop location", shopLocation.googleMapsUrl);
   if (order.destination) {
@@ -609,6 +623,8 @@ function buildSummary(order) {
     `${translate("Name:")} ${order.name}`,
     `${translate("Mobile:")} ${order.mobile}`,
     `${translate("Preference:")} ${translate(order.fulfilment)}`,
+    `${translate("Shop Hours:")} ${translate("Every day, 8:00 AM – 10:00 PM")}`,
+    `${translate("Home Delivery:")} ${translate("Every day, 10:00 AM – 9:00 PM")}`,
     "",
     translate("Gowri Medicals Shop Location:"),
     `${translate("Shop address:")} ${shopLocation.address}`,
@@ -747,6 +763,20 @@ function updateFulfilmentFields() {
       ? "Share and confirm your exact location for doorstep delivery."
       : "For shop pickup, sharing your location is optional."
   );
+  updateFulfilmentHoursStatus();
+}
+
+function updateFulfilmentHoursStatus() {
+  const fulfilment = form.querySelector('input[name="fulfilment"]:checked')?.value;
+  const [hours, minutes] = shopTimeFormatter.format(new Date()).split(":").map(Number);
+  const currentMinute = hours * 60 + minutes;
+  const message = fulfilment === "Doorstep Delivery" && (currentMinute < 600 || currentMinute >= 1260)
+    ? "Doorstep delivery is available only between 10:00 AM and 9:00 PM. You can still send a request; Gowri Medicals will confirm availability."
+    : fulfilment === "Shop Pickup" && (currentMinute < 480 || currentMinute >= 1320)
+      ? "Shop pickup is available only between 8:00 AM and 10:00 PM. You can still send a request; Gowri Medicals will confirm availability."
+      : "";
+  fulfilmentHoursStatus.textContent = message ? translate(message) : "";
+  fulfilmentHoursStatus.hidden = !message;
 }
 
 fulfilmentInputs.forEach((input) => input.addEventListener("change", updateFulfilmentFields));
@@ -755,6 +785,7 @@ updateFulfilmentFields();
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   formError.hidden = true;
+  updateFulfilmentHoursStatus();
 
   if (!form.reportValidity()) return;
 

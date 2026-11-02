@@ -34,6 +34,6 @@ The site files use relative paths. For a manually uploaded site, upload the cont
 - Working hours and delivery/locality information are shown in `index.html`.
 - Delivery locality choices are in the manual address form in `index.html`.
 
-## Owner and store photos
+## Store photos
 
-The original owner photos are included locally in `images/k-satish.png` and `images/g-srinivasa-rao.png`. The original store photos are included in `images/gowri-medicals-interior.png` and `images/gowri-medicals-storefront.png`.
+The original store photos are included in `images/gowri-medicals-interior.png` and `images/gowri-medicals-storefront.png`.
