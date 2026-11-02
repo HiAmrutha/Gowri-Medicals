@@ -222,6 +222,9 @@ const teluguTranslations = Object.freeze({
   "Gowri Medicals Shop Location:": "Gowri Medicals దుకాణ స్థానం:",
   "Shop Google Maps:": "దుకాణం Google Maps:",
   "Customer Location:": "కస్టమర్ స్థానం:",
+  "Location status": "స్థితి",
+  "Location status:": "స్థితి:",
+  "Confirmed": "నిర్ధారించబడింది",
   "Customer location: Not shared (optional for shop pickup).": "కస్టమర్ స్థానం: పంచుకోలేదు (దుకాణం నుంచి తీసుకునేటప్పుడు ఐచ్ఛికం).",
   "Customer address:": "కస్టమర్ చిరునామా:",
   "Customer Google Maps:": "కస్టమర్ Google Maps:",
@@ -595,6 +598,7 @@ function buildSummary(order) {
     if (order.destination.address) addSummaryItem("Customer address:", order.destination.address);
     if (order.destination.landmark) addSummaryItem("Landmark", order.destination.landmark);
     addSummaryItem("Coordinates", `${order.destination.latitude.toFixed(6)}, ${order.destination.longitude.toFixed(6)}`);
+    addSummaryItem("Location status", translate("Confirmed"));
     addSummaryLink("Customer Google Maps:", "Open destination location", createGoogleDestinationLink(order.destination));
     if (order.fulfilment === "Doorstep Delivery") {
       addSummaryLink("Shop-to-customer directions", "Open driving directions", createGoogleDirectionsLink(order.destination));
@@ -643,6 +647,7 @@ function buildSummary(order) {
           ...(order.destination.landmark ? [`${translate("Landmark:")} ${order.destination.landmark}`] : []),
           `${translate("Latitude:")} ${order.destination.latitude.toFixed(6)}`,
           `${translate("Longitude:")} ${order.destination.longitude.toFixed(6)}`,
+          `${translate("Location status:")} ${translate("Confirmed")}`,
           `${translate("Customer Google Maps:")} ${createGoogleDestinationLink(order.destination)}`,
           ...(order.fulfilment === "Doorstep Delivery" && order.destination.instructions
             ? [`${translate("Delivery instructions:")} ${order.destination.instructions}`]
@@ -833,7 +838,7 @@ form.addEventListener("submit", (event) => {
     name: String(data.get("name")).trim(),
     mobile,
     fulfilment,
-    destination: fulfilment === "Doorstep Delivery" ? confirmedLocation || null : null,
+    destination: confirmedLocation || null,
     medicines,
     instructions: String(data.get("instructions") || "").trim(),
     urgent: data.get("urgent") === "on"
